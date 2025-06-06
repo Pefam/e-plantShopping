@@ -37,14 +37,9 @@ const CartItem = ({ onContinueShopping }) => {
     alert('Functionality to be added for future reference');
   };
 
-  const calculateTotalQuantity = () => {
-    return cart ? cart.reduce((total, item) => total + item.quantity, 0) : 0;
-    };
-
   return (
     <div className="cart-container">
       <h2 style={{ color: 'black' }}>Total Cart Amount: ${calculateTotalAmount()}</h2>
-      <h2 style={{ color: 'black' }}>Total Cart Quantity: {calculateTotalQuantity()}</h2>
       <div>
         {cart.map(item => (
           <div className="cart-item" key={item.name}>
